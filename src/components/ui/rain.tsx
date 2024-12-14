@@ -20,7 +20,7 @@ const Rain = ({ children }: { children?: React.ReactNode }) => {
 
 
     // Procedural Rain
-    const numDrops = 300;
+    const numDrops = 150;
     const drops: { x: number; y: number; length: number; speed: number }[] = [];
 
     const createDrop = () => ({
@@ -68,13 +68,12 @@ const Rain = ({ children }: { children?: React.ReactNode }) => {
 
   return (
     <>
-      <div className="absolute left-0 right-0 top-0 bottom-0">
+      <div className="absolute left-0 right-0 top-0 bottom-0 z-20">
         <canvas ref={canvasRef} />
       </div>
-      <div className="absolute left-0 right-0 top-0 bottom-0 flex flex-col items-center justify-center">
+      <div className="z-50">
         {children}
       </div>
-      <div className="h-[95vh]"/>
     </>
   );
 };
