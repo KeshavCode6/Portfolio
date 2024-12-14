@@ -7,10 +7,14 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+import waves from "@/public/waves.svg"
+import headshot from "@/public/headshot.jpg"
+import Image from "next/image"
+
 export default function HeroSection() {
   return (
     <Navbar>
-      <div className="flex flex-col items-center justify-center h-[90vh]">
+      <div className="flex flex-col items-center justify-center min-h-[80vh]">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32 z-50 p-8 rounded-lg">
           <div className="lg:w-1/2 mb-10 lg:mb-0 px-8 text-center md:px-0 md:text-left">
             <h1 className="flex text-xl md:text-5xl gap-3 items-center font-bold leading-tight">
@@ -30,7 +34,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="bg-black w-64 aspect-square rounded-full" />
+          <Image src={headshot}  alt="headshot" className=" w-64 aspect-square rounded-full" />
         </div>
 
         <div className="flex flex-col mt-4 z-50 items-center mb-4 md:mb-0 p-8 rounded-lg">
@@ -57,6 +61,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <Image className="w-full absolute bottom-0 z-10" alt="waves" src={waves}/>
     </Navbar>
   );
 }

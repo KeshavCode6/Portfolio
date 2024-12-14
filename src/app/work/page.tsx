@@ -7,7 +7,6 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 function Work() {
     return (
         <Navbar>
-
             {/* Main Content */}
             <div className="flex flex-col items-center justify-center mt-16">
                 <p className="text-2xl font-bold">My Work</p>
@@ -18,7 +17,7 @@ function Work() {
             </div>
 
             {/* Grid Layout for Projects */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-8 z-50">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-8 z-50 md:mx-32">
                 <Card className="p-4 px-8 col-span-2">
                     <div className='flex'>
                         <div className='flex flex-col'>
@@ -60,15 +59,17 @@ function Work() {
                         This was a discontinued organization that I was a part of over the summer. I developed the landing page
                         website for the organization, however, which is still accessible at getballista.com today.
                     </p>
-                    <Button size={"icon"} variant={"secondary"} className='mt-4'><FaExternalLinkAlt /></Button>
+                    <Button size={"icon"} variant={"secondary"} className='mt-4'><FaGithub /></Button>
+                    <Button size={"icon"} variant={"secondary"} className='mt-4 ml-2'><FaExternalLinkAlt /></Button>
                 </Card>
                 <Card className='p-4'>
-                <p className='font-semibold text-md text-blue-500'>Static Site</p>
+                    <p className='font-semibold text-md text-blue-500'>Static Site</p>
                     <p className='font-bold text-lg mb-0 max-w-lg'>Old Portfolio</p>
                     <p className='max-w-96'>
                         This was my old personal portfolio website, which is available on github
                     </p>
                     <Button size={"icon"} variant={"secondary"} className='mt-4'><FaGithub /></Button>
+                    <Button size={"icon"} variant={"secondary"} className='ml-2 mt-4'><FaExternalLinkAlt /></Button>
                 </Card>
             </div>
         </Navbar>
