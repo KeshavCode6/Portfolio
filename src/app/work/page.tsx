@@ -3,11 +3,12 @@ import { Card } from '@/components/ui/card';
 import Navbar from '@/components/ui/navbar';
 import React from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
+import waves from "@/public/waves.svg"
 
 function Work() {
     return (
         <Navbar>
-            {/* Main Content */}
             <div className="flex flex-col items-center justify-center mt-16">
                 <p className="text-2xl font-bold">My Work</p>
                 <p className="text-center text-sm w-full max-w-2xl">
@@ -16,7 +17,6 @@ function Work() {
                 </p>
             </div>
 
-            {/* Grid Layout for Projects */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-8 z-50 md:mx-32">
                 <Card className="p-4 px-8 col-span-2">
                     <div className='flex'>

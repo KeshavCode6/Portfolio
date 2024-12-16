@@ -34,7 +34,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <Image src={headshot}  alt="headshot" className=" w-64 aspect-square rounded-full" />
+          <Image src={headshot} alt="headshot" className=" w-64 aspect-square rounded-full" />
         </div>
 
         <div className="flex flex-col mt-4 z-50 items-center mb-4 md:mb-0 p-8 rounded-lg">
@@ -61,7 +61,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <Image className="w-full absolute bottom-0 z-10" alt="waves" src={waves}/>
+      <Image className="absolute bottom-0  w-screen" alt="waves" src={waves} />
     </Navbar>
   );
 }
