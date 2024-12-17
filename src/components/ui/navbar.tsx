@@ -37,7 +37,7 @@ export default function Navbar({ children, className }: { children?: React.React
             My Work
           </Link>
           <Button asChild>
-            <Link href="/contact">Contact Me</Link>
+            <Link href="/conclusion">Conclusion</Link>
           </Button>
         </div>
 
@@ -63,7 +63,7 @@ export default function Navbar({ children, className }: { children?: React.React
               My Work
             </Link>
             <Button asChild>
-              <Link href="/contact">Contact Me</Link>
+              <Link href="/conclusion">Conclusion</Link>
             </Button>
           </SheetContent>
         </Sheet>

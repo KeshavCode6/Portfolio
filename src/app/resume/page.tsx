@@ -17,16 +17,19 @@ export default function Resume() {
             <div className='flex flex-col xl:flex-row w-full items-center justify-center xl:h-full px-4 md:px-0 py-8 gap-16'>
                 <div className='max-w-lg mt-8'>
                     <h2 className="text-2xl font-bold mb-2 text-center">Overview</h2>
+                    <p className='text-sm'>
                     The following is an E-Resume and Cover letter that has sensitive details omitted. Please contact me above
                     to get the full resume! The following are parts of my resume I would like to highlight or add onto!
+                    </p>
+
 
                     <h2 className="text-xl font-medium  mt-4 text-left">Professional Development</h2>
-                    <p className="mb-4">
+                    <p className="mb-4 text-sm">
                         My commitment to making an impact is evident through my work with <span className="font-semibold">Next Generation Focus</span>, where I dedicate my time as a volunteer tutor helping students excel in Math and English Language Arts. This role has allowed me to contribute to the community while honing my mentorship and leadership skills.
                     </p>
 
                     <h2 className="text-xl font-medium  mt-4 text-left">Awards</h2>
-                    <p>
+                    <p className='text-sm'>
                         I have been recognized with several prestigious awards, including <span className="font-semibold">3rd place in the GASTC Tech Fair (2024)</span> and the <span className="font-semibold">VEX Robotics Excellence Award</span>.
                         These awards reflect my dedication to excellence and innovation across various domains, from humanitarian initiatives to technical competitions.
                     </p>

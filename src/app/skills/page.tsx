@@ -5,16 +5,20 @@ import { Card } from '@/components/ui/card'
 import Navbar from '@/components/ui/navbar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
+import Image from 'next/image'
+import website from "@/public/images/business.jpg"
+import business from "@/public/images/website.jpg"
+import cyber from "@/public/images/hacker.jpg"
+import mobile from "@/public/images/mobile.jpg"
 
 export default function Work() {
     const [selectedTab, setSelectedTab] = useState("web-development");
 
-    const tabImages: { [key: string]: string } = {
-        "web-development": "/path/to/web-development-image.jpg",
-        "mobile-development": "/path/to/mobile-development-image.jpg",
-        "cybersecurity": "/path/to/cybersecurity-image.jpg",
-        "microsoft-office": "/path/to/microsoft-office-image.jpg",
-        "soft-skills": "/path/to/soft-skills-image.jpg"
+    const tabImages: { [key: string]: any } = {
+        "web-development": website,
+        "mobile-development": mobile,
+        "cybersecurity": cyber,
+        "soft-skills": business
     };
     return (
         <Navbar>
@@ -33,12 +37,11 @@ export default function Work() {
                                 onValueChange={(value) => setSelectedTab(value)}
                             >
                                 <div className='flex w-full items-center justify-center'>
-                                    <TabsList className="grid grid-cols-2 2xl:grid-cols-5 w-fit items-center gap-2 sm:flex-row sm:gap-4 mb-24 2xl:mb-0">
+                                    <TabsList className="grid grid-cols-2 lg:grid-cols-4 mb-8 lg:mb-0">
                                         <TabsTrigger value="web-development">Web Dev</TabsTrigger>
                                         <TabsTrigger value="mobile-development">Mobile Dev</TabsTrigger>
                                         <TabsTrigger value="cybersecurity">Cybersecurity</TabsTrigger>
-                                        <TabsTrigger value="microsoft-office">Microsoft Office</TabsTrigger>
-                                        <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
+                                        <TabsTrigger value="soft-skills">Business Skills</TabsTrigger>
                                     </TabsList>
                                 </div>
                                 <TabsContent value="web-development">
@@ -64,25 +67,22 @@ export default function Work() {
                                         <li className="text-md mb-2">Basic understanding of IT fundamentals in networking and device configuration</li>
                                     </ul>
                                 </TabsContent>
-                                <TabsContent value="microsoft-office">
-                                    <ul className="list-disc pl-6">
-                                        <li className="text-md mb-2">Familiar with using Microsoft Word <Link href="/" className='text-blue-400 underline' target='_blank'>(Word Expert Certified, 100% on the exam)</Link></li>
-                                        <li className="text-md mb-2">Familiar with using Microsoft PowerPoint <Link href="/" className='text-blue-400 underline' target='_blank'>(PowerPoint Associate Certified)</Link></li>
-                                        <li className="text-md mb-2">Familiar with using Microsoft Excel <Link href="/" className='text-blue-400 underline' target='_blank'>(Excel Associate Certified)</Link></li>
-                                    </ul>
-                                </TabsContent>
                                 <TabsContent value="soft-skills">
                                     <ul className="list-disc pl-6">
                                         <li className="text-md mb-2">Strong leader and collaborator in a team environment</li>
                                         <li className="text-md mb-2">Good work ethic and self-motivated</li>
                                         <li className="text-md mb-2">Passable public speaker</li>
+                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Word Expert Certified (100% on the exam)</Link></li>
+                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>PowerPoint Associate Certified</Link></li>
+                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Excel Associate Certified</Link></li>
                                     </ul>
                                 </TabsContent>
                             </Tabs>
                         </Card>
-                        <div
-                            className="bg-gray-200 aspect-square rounded-lg  overflow-auto w-96 mb-4 md:mb-0"
-                            style={{ backgroundImage: `url(${tabImages[selectedTab]})`, backgroundSize: 'cover' }}
+                        <Image
+                            alt="image"
+                            src={tabImages[selectedTab]}
+                            className="aspect-square rounded-lg w-72 lg:w-96 mb-4 md:mb-0"
                         />
                     </div>
                 </div>
