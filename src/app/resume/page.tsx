@@ -1,96 +1,59 @@
-import Navbar from '@/components/ui/navbar';
-import React from 'react';
-import Image from 'next/image';
-import waves from "@/public/waves.svg"
-function Resume() {
+'use client'
+
+import Navbar from '@/components/ui/navbar'
+import React from 'react'
+import { Card } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import ResumeContent from '@/components/resume-content'
+
+export default function Resume() {
     return (
         <Navbar>
-            <div className="px-6 py-8 max-w-4xl mx-auto">
-                <h1 className="text-3xl font-bold text-center">Keshav Shah</h1>
-                <p className="text-center text-gray-600">
-                    6030 Parkway Downs Dr, Suwanee, GA • +1-470-820-8274 • <a href="mailto:keshavrshah@gmail.com" className="text-blue-600 hover:underline">keshavrshah@gmail.com</a> • <a href="https://keshav.pro" className="text-blue-600 hover:underline">keshav.pro</a>
-                </p>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Objective</h2>
-                    <p>
-                        To apply my skills in software development and cybersecurity to design, build, and secure
-                        innovative applications and systems. Passionate about leveraging emerging technologies and
-                        best practices to develop robust, scalable, and secure solutions that utilize concepts such as
-                        Artificial Intelligence, Machine Learning, etc.
-                    </p>
-                </section>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Education</h2>
-                    <p className="font-medium">Highschool Diploma</p>
-                    <p>Alliance Academy for Innovation in Cumming, GA</p>
-                    <p>GPA: 4.0 (unweighted)</p>
-                    <p>Course Rigor: AP CSP, AP Physics 1, AP Precalculus, AP US History, AP World History (5), AP Human Geography</p>
-                </section>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Skills</h2>
-                    <ul className="list-disc list-inside">
-                        <li>Proficient in Fundamentals of Cybersecurity (GIAC GFACT certified)</li>
-                        <li>Experienced in Software Development (web, mobile, etc.)</li>
-                        <li>Programming languages: Python, JavaScript, C#, C++, Java</li>
-                        <li>Certified in Microsoft PowerPoint, Word (Expert), and Excel</li>
-                        <li>Strong problem-solving and critical-thinking skills</li>
-                        <li>Effective collaborator and team player</li>
-                        <li>Strong and diligent work ethic</li>
-                    </ul>
-                </section>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Awards</h2>
-                    <ul className="list-disc list-inside">
-                        <li>Hack Gwinnett's Best Humanitarian, 2023</li>
-                        <li>1st Place in Lanier Tech Fair Internet Applications, 2024</li>
-                        <li>3rd Place in Georgia Student Technology Association Internet Applications, 2024</li>
-                        <li>3rd Place in Georgia Student Technology Association Programming Challenge, 2024</li>
-                        <li>Cyberstart Leapfrog Scholars in Georgia, 2024</li>
-                        <li>Robotics Vex Excellence Award, 2024</li>
-                        <li>Top 30 placements in National Cyber League (4 competitions, high school bracket), 2024</li>
-                    </ul>
-                </section>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Experience</h2>
-                    <div className="mb-4">
-                        <p className="font-medium">VP Of Development</p>
-                        <p>Coding Club at Alliance Academy for Innovation</p>
-                        <p>• Aided in monthly club meeting planning and execution</p>
-                        <p>• Fully developed club coding platform</p>
-                    </div>
-                    <div className="mb-4">
-                        <p className="font-medium">Cybersecurity Committee Officer</p>
-                        <p>Cybersecurity Club at Alliance Academy for Innovation</p>
-                        <p>• Aided in monthly club meeting planning and execution</p>
-                        <p>• Helped create challenges for club-run cybersecurity capture the flag website</p>
-                    </div>
-                    <div>
-                        <p className="font-medium">Lead Robotics Programmer</p>
-                        <p>Vex Team 17451B at Alliance Academy for Innovation</p>
-                        <p>• Completely developed robot-related code</p>
-                        <p>• Aided in state competition qualification and winning of Vex Excellence Award</p>
-                    </div>
-                </section>
-
-                <section className="mt-8">
-                    <h2 className="text-xl font-semibold">Extracurricular & Volunteering</h2>
-                    <div>
-                        <p className="font-medium">Volunteer Tutor</p>
-                        <p>Next Generation Focus</p>
-                        <p>• Teaching students from grades 2-6 subjects such as Math & ELA for 6 hours a week</p>
-                    </div>
-                </section>
+            <div className='container mx-auto flex flex-row  px-4 py-8 gap-4'>
+                <div className="flex-1 max-w-xl mx-auto"> {/* Main Tabs Section */}
+                    <Tabs defaultValue="resume" className="w-full">
+                        <TabsList className="grid w-full grid-cols-2">
+                            <TabsTrigger value="resume">E-Resume</TabsTrigger>
+                            <TabsTrigger value="cover-letter">Cover Letter</TabsTrigger>
+                        </TabsList>
+                        <TabsContent value="resume">
+                            <Card className="p-6 overflow-auto max-h-[70vh] h-full">
+                                <ResumeContent/>
+                            </Card>
+                        </TabsContent>
+                        <TabsContent value="cover-letter">
+                            <Card className="p-6 overflow-auto max-h-[70vh] h-full">
+                                <h2 className="text-2xl font-bold mb-4">About Me</h2>
+                                <div className="space-y-4">
+                                    <p>
+                                        As a passionate and driven individual, I am constantly seeking new challenges and opportunities to grow in the fields of software development and cybersecurity. My journey began with a fascination for technology and has evolved into a deep commitment to creating innovative solutions and securing digital landscapes.
+                                    </p>
+                                    <p>
+                                        My experiences span a variety of fields, including education, robotics, and community involvement. As a volunteer tutor with Next Generation Focus, I’ve devoted my time to mentoring young students in subjects such as Math and English, fostering their academic growth and confidence. In robotics, I served as the lead programmer for VEX Team 17451B, where I developed all robot-related code and contributed to winning the VEX Excellence Award at the state level. These experiences reflect my ability to lead, collaborate, and innovate in diverse environments.
+                                    </p>
+                                    <p>
+                                        My achievements, such as being recognized with <span className="font-semibold">Hack Gwinnett's Best Humanitarian Award</span>, earning top placements in <span className="font-semibold">National Cyber League competitions</span>, and excelling in various <span className="font-semibold">Georgia Student Technology Association challenges</span>, highlight my drive for excellence. These accolades underscore my commitment to applying my skills in impactful and meaningful ways.
+                                    </p>
+                                    <p>
+                                        I am passionate about leveraging my skills and experiences to contribute to projects that drive positive change. With a strong foundation in technical expertise and a proven record of achievement, I am eager to take on new opportunities that challenge me to grow and make a difference.
+                                    </p>
+                                </div>
+                            </Card>
+                        </TabsContent>
+                    </Tabs>
+                </div>
+                <div className='w-80 flex-shrink-0 mt-8'> {/* Sidebar */}
+                    <h2 className="text-2xl font-bold mb-4 text-center">Overview</h2>
+                    <Card className="p-6">
+                        <p className="mb-4">
+                            With numerous awards such as <span className="font-semibold">Hack Gwinnett's Best Humanitarian</span> and the <span className="font-semibold">VEX Robotics Excellence Award</span>, I take pride in balancing technical expertise with a drive for innovation. My professional development includes certifications like GIAC GFACT and mastery in programming languages such as Python, JavaScript, and C++. These achievements highlight a continuous journey of learning and impact in the tech field.
+                        </p>
+                        <p>
+                            Through leadership roles in clubs like the Cybersecurity and Coding clubs, I've cultivated strong teamwork and organizational skills. Additionally, my work with Next Generation Focus as a volunteer tutor and my involvement in robotics competitions showcase my commitment to both community engagement and technical excellence. These experiences have equipped me to lead initiatives and contribute meaningfully to collaborative projects.
+                        </p>
+                    </Card>
+                </div>
             </div>
-
-            <Image className="absolute bottom-0  w-screen" alt="waves" src={waves}/>
-
         </Navbar>
-    );
+    )
 }
-
-export default Resume;

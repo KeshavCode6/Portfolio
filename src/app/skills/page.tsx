@@ -5,18 +5,16 @@ import { Card } from '@/components/ui/card'
 import Navbar from '@/components/ui/navbar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
-import waves from "@/public/waves.svg"
-import Image from 'next/image'
 
 export default function Work() {
     return (
         <Navbar>
-            <div className="flex flex-col items-center justify-center min-h-[70vh]">
+            <div className="flex flex-col items-center justify-center min-h-[80vh]">
                 <div className="flex flex-col w-full items-center gap-4">
                     <div className="flex flex-col items-center justify-center mt-16">
                         <h1 className="text-2xl font-bold">My Skills</h1>
                         <p className="text-center text-sm w-full max-w-2xl">
-                            The following are some of my skills, many of which are verified through formal certification
+                            The following are some of my skills, many of which are verified through formal certification.
                         </p>
                     </div>
                     <div className="flex gap-4 w-full items-center justify-center">
@@ -33,7 +31,7 @@ export default function Work() {
                                     <ul className="list-disc pl-6">
                                         <li className="text-md mb-2">Experienced using modern frameworks like Next.js and React to create functional web apps <Link href="/" className='text-blue-400 underline' target='_blank'>(See my projects)</Link></li>
                                         <li className="text-md mb-2">Capable backend developer with Express.js or Flask</li>
-                                        <li className="text-md mb-2">Capable with design and using technologies like Tailwind CSS </li>
+                                        <li className="text-md mb-2">Capable with design and using technologies like Tailwind CSS</li>
                                         <li className="text-md mb-2">Familiar with using both SQL and NoSQL databases with ORMs like Prisma</li>
                                         <li className="text-md mb-2">Familiar with using websockets to create realtime applications</li>
                                     </ul>
@@ -48,7 +46,7 @@ export default function Work() {
                                     <ul className="list-disc pl-6">
                                         <li className="text-md mb-2">Familiar with the fundamentals of offensive cybersecurity</li>
                                         <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Certified by the SEC275 GFACT (97% on the exam)</Link></li>
-                                        <li className="text-md mb-2">Capable CTF competitor with strong preformances in NCL</li>
+                                        <li className="text-md mb-2">Capable CTF competitor with strong performances in NCL</li>
                                         <li className="text-md mb-2">Basic understanding of IT fundamentals in networking and device configuration</li>
                                     </ul>
                                 </TabsContent>
@@ -69,10 +67,22 @@ export default function Work() {
                                 </TabsContent>
                             </Tabs>
                         </Card>
-                        <div className="bg-blue-400 aspect-square rounded-lg resize overflow-auto flex-1 max-w-96" />
+                        <div className="flex flex-col gap-4 w-[35vw]">
+                            <Card className="h-48 p-6 overflow-auto">
+                                <h2 className="text-lg font-bold mb-4">Overview</h2>
+                                <p className="text-sm">
+                                    I am a versatile developer with expertise in web and mobile technologies, a strong foundation in cybersecurity, and a history of effective problem-solving and teamwork. I am passionate about leveraging technology to solve real-world problems.
+                                </p>
+                            </Card>
+                            <Card className="h-48 p-6 overflow-auto">
+                                <h2 className="text-lg font-bold mb-4">Resume & Cover Letter</h2>
+                                <p className="text-sm">
+                                    Check out my <Link href="/" className="text-blue-400 underline" target="_blank">Resume</Link> and <Link href="/" className="text-blue-400 underline" target="_blank">Cover Letter</Link> to learn more about my experience and skills.
+                                </p>
+                            </Card>
+                        </div>
                     </div>
                 </div>
-                <Image className="absolute bottom-0  w-screen" alt="waves" src={waves} />
             </div>
         </Navbar>
     )
