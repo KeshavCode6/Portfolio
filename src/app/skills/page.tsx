@@ -62,7 +62,7 @@ export default function Work() {
                                 <TabsContent value="cybersecurity">
                                     <ul className="list-disc pl-6">
                                         <li className="text-md mb-2">Familiar with the fundamentals of offensive cybersecurity</li>
-                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Certified by the SEC275 GFACT (97% on the exam)</Link></li>
+                                        <li className="text-md mb-2"><Link href="https://www.credly.com/earner/earned/badge/4f55b8e4-949f-4ae5-9a47-88ebeeebc019" className='text-blue-400 underline' target='_blank'>Certified by the SEC275 GFACT (97% on the exam)</Link></li>
                                         <li className="text-md mb-2">Capable CTF competitor with strong performances in NCL</li>
                                         <li className="text-md mb-2">Basic understanding of IT fundamentals in networking and device configuration</li>
                                     </ul>
@@ -72,9 +72,9 @@ export default function Work() {
                                         <li className="text-md mb-2">Strong leader and collaborator in a team environment</li>
                                         <li className="text-md mb-2">Good work ethic and self-motivated</li>
                                         <li className="text-md mb-2">Passable public speaker</li>
-                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Word Expert Certified (100% on the exam)</Link></li>
-                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>PowerPoint Associate Certified</Link></li>
-                                        <li className="text-md mb-2"><Link href="/" className='text-blue-400 underline' target='_blank'>Excel Associate Certified</Link></li>
+                                        <li className="text-md mb-2"><Link href="https://www.credly.com/earner/earned/badge/3153dcba-d6b7-4315-bc00-d62729e1e772" className='text-blue-400 underline' target='_blank'>Word Expert Certified (100% on the exam)</Link></li>
+                                        <li className="text-md mb-2"><Link href="https://www.credly.com/earner/earned/badge/133c2323-45bf-4714-a727-cd5b74ab04c6" className='text-blue-400 underline' target='_blank'>PowerPoint Associate Certified</Link></li>
+                                        <li className="text-md mb-2"><Link href="https://www.credly.com/earner/earned/badge/5c977149-2ef8-4617-9adf-a9134a2584ac" className='text-blue-400 underline' target='_blank'>Excel Associate Certified</Link></li>
                                     </ul>
                                 </TabsContent>
                             </Tabs>
