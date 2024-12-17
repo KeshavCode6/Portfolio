@@ -44,7 +44,7 @@ function ResumeContent() {
         <section className="mt-8">
             <h2 className="text-2xl font-semibold">Awards</h2>
             <ul className="list-disc list-inside mt-2">
-                <li>Hack Gwinnett's Best Humanitarian, 2023</li>
+                <li>Hack Gwinnett&apos; Best Humanitarian, 2023</li>
                 <li>1st Place in Lanier Tech Fair Internet Applications, 2024</li>
                 <li>3rd Place in Georgia Student Technology Association Internet Applications, 2024</li>
                 <li>3rd Place in Georgia Student Technology Association Programming Challenge, 2024</li>

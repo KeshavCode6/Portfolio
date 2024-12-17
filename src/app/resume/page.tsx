@@ -17,7 +17,7 @@ export default function Resume() {
             <div className='flex flex-col 2xl:flex-row w-full items-center justify-center 2xl:h-full px-4 md:px-0 py-8 gap-16'>
                 <div className='max-w-lg mt-8'>
                     <h2 className="text-2xl font-bold mb-2 text-center">Overview</h2>
-                    The Following is an E-Resume and Cover letter that has sensitive details omitted. Please contact me above
+                    The following is an E-Resume and Cover letter that has sensitive details omitted. Please contact me above
                     to get the full resume! The following are parts of my resume I would like to highlight or add onto!
 
                     <h2 className="text-xl font-medium  mt-4 text-left">Professional Development</h2>
@@ -43,11 +43,10 @@ export default function Resume() {
                         <div className='flex-1'>
                             <Image src={Cyber} alt="Cyber award" className='w-full' />
                             <p className='text-xs text-center mt-2'>Me at the Cyberstart Leapfrog Scholars lunch, May 2024</p>
-
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 md:mx-32 2xl:mx-0 2xl:max-w-[35vw]"> {/* Main Tabs Section */}
+                <div className="flex-1 md:mx-32 2xl:mx-0 2xl:max-w-[35vw]"> 
                     <Tabs defaultValue="resume" className="w-full">
                         <TabsList className="grid w-full grid-cols-2">
                             <TabsTrigger value="resume">E-Resume</TabsTrigger>
