@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32 z-50 p-8 pb-0 sm:pb-8 rounded-lg w-full max-w-screen-xl">
           <div className="lg:w-1/2 mb-10 lg:mb-0 px-8 text-center md:px-0 md:text-left">
             <span className="flex text-3xl md:text-5xl gap-3 items-center justify-center md:justify-normal font-bold leading">
-              I&apo;sm Keshav!
+              I&apos;m Keshav!
             </span>
             <p className="text-sm md:text-lg font-semibold text-blue-500">
               Highschool Software Developer & AI Enthusiast

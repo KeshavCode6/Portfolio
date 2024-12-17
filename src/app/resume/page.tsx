@@ -14,7 +14,7 @@ import Image from 'next/image'
 export default function Resume() {
     return (
         <Navbar>
-            <div className='flex flex-col 2xl:flex-row w-full items-center justify-center 2xl:h-full px-4 md:px-0 py-8 gap-16'>
+            <div className='flex flex-col xl:flex-row w-full items-center justify-center xl:h-full px-4 md:px-0 py-8 gap-16'>
                 <div className='max-w-lg mt-8'>
                     <h2 className="text-2xl font-bold mb-2 text-center">Overview</h2>
                     The following is an E-Resume and Cover letter that has sensitive details omitted. Please contact me above
@@ -46,7 +46,7 @@ export default function Resume() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 md:mx-32 2xl:mx-0 2xl:max-w-[35vw]"> 
+                <div className="flex-1 md:mx-32 xl:mx-0 xl:max-w-[35vw]"> 
                     <Tabs defaultValue="resume" className="w-full">
                         <TabsList className="grid w-full grid-cols-2">
                             <TabsTrigger value="resume">E-Resume</TabsTrigger>

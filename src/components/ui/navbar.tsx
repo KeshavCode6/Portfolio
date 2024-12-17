@@ -49,8 +49,22 @@ export default function Navbar({ children, className }: { children?: React.React
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
+            <Link href="/" className={` hover:text-blue-500 ${path == "/" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+              About
+            </Link>
+            <Link href="/resume" className={` hover:text-blue-500 ${path == "/resume" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+              Resume
+            </Link>
+            <Link href="/skills" className={` hover:text-blue-500 ${path == "/skills" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+              Skills
+            </Link>
+            <Link href="/work" className={` hover:text-blue-500 ${path == "/work" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+              My Work
+            </Link>
+            <Button asChild>
+              <Link href="/contact">Contact Me</Link>
+            </Button>
           </SheetContent>
         </Sheet>
       </header>
