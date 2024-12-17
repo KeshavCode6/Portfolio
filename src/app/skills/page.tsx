@@ -1,37 +1,51 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import Navbar from '@/components/ui/navbar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
 
 export default function Work() {
+    const [selectedTab, setSelectedTab] = useState("web-development");
+
+    const tabImages: { [key: string]: string } = {
+        "web-development": "/path/to/web-development-image.jpg",
+        "mobile-development": "/path/to/mobile-development-image.jpg",
+        "cybersecurity": "/path/to/cybersecurity-image.jpg",
+        "microsoft-office": "/path/to/microsoft-office-image.jpg",
+        "soft-skills": "/path/to/soft-skills-image.jpg"
+    };
     return (
         <Navbar>
-            <div className="flex flex-col items-center justify-center min-h-[80vh]">
+            <div className="flex flex-col items-center justify-center">
                 <div className="flex flex-col w-full items-center gap-4">
-                    <div className="flex flex-col items-center justify-center mt-16">
+                    <header className="flex flex-col items-center justify-center mt-16 mx-4">
                         <h1 className="text-2xl font-bold">My Skills</h1>
                         <p className="text-center text-sm w-full max-w-2xl">
-                            The following are some of my skills, many of which are verified through formal certification.
+                            The following are some of my skills, many of which are verified through formal certification
                         </p>
-                    </div>
-                    <div className="flex gap-4 w-full items-center justify-center">
-                        <Card className="w-[35vw] h-96 overflow-auto p-6">
-                            <Tabs defaultValue="web-development" className="w-full">
-                                <TabsList className="flex w-full items-center">
-                                    <TabsTrigger value="web-development">Web Dev</TabsTrigger>
-                                    <TabsTrigger value="mobile-development">Mobile Dev</TabsTrigger>
-                                    <TabsTrigger value="cybersecurity">Cybersecurity</TabsTrigger>
-                                    <TabsTrigger value="microsoft-office">Microsoft Office</TabsTrigger>
-                                    <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
-                                </TabsList>
+                    </header>
+                    <div className="flex flex-col md:flex-row gap-4 w-full items-center justify-center">
+                        <Card className="w-[85vw] md:w-96 lg:w-[35vw] md:h-96 overflow-auto p-6">
+                            <Tabs
+                                defaultValue="web-development"
+                                onValueChange={(value) => setSelectedTab(value)}
+                            >
+                                <div className='flex w-full items-center justify-center'>
+                                    <TabsList className="grid grid-cols-2 2xl:grid-cols-5 w-fit items-center gap-2 sm:flex-row sm:gap-4 mb-24 2xl:mb-0">
+                                        <TabsTrigger value="web-development">Web Dev</TabsTrigger>
+                                        <TabsTrigger value="mobile-development">Mobile Dev</TabsTrigger>
+                                        <TabsTrigger value="cybersecurity">Cybersecurity</TabsTrigger>
+                                        <TabsTrigger value="microsoft-office">Microsoft Office</TabsTrigger>
+                                        <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
+                                    </TabsList>
+                                </div>
                                 <TabsContent value="web-development">
                                     <ul className="list-disc pl-6">
-                                        <li className="text-md mb-2">Experienced using modern frameworks like Next.js and React to create functional web apps <Link href="/" className='text-blue-400 underline' target='_blank'>(See my projects)</Link></li>
+                                        <li className="text-md mb-2">Experienced using modern frameworks like Next.js and React to create functional web apps</li>
                                         <li className="text-md mb-2">Capable backend developer with Express.js or Flask</li>
-                                        <li className="text-md mb-2">Capable with design and using technologies like Tailwind CSS</li>
+                                        <li className="text-md mb-2">Capable with design and using technologies like Tailwind CSS </li>
                                         <li className="text-md mb-2">Familiar with using both SQL and NoSQL databases with ORMs like Prisma</li>
                                         <li className="text-md mb-2">Familiar with using websockets to create realtime applications</li>
                                     </ul>
@@ -59,7 +73,6 @@ export default function Work() {
                                 </TabsContent>
                                 <TabsContent value="soft-skills">
                                     <ul className="list-disc pl-6">
-                                        <li className="text-md mb-2">Strong problem-solver and critical-thinker</li>
                                         <li className="text-md mb-2">Strong leader and collaborator in a team environment</li>
                                         <li className="text-md mb-2">Good work ethic and self-motivated</li>
                                         <li className="text-md mb-2">Passable public speaker</li>
@@ -67,20 +80,10 @@ export default function Work() {
                                 </TabsContent>
                             </Tabs>
                         </Card>
-                        <div className="flex flex-col gap-4 w-[35vw]">
-                            <Card className="h-48 p-6 overflow-auto">
-                                <h2 className="text-lg font-bold mb-4">Overview</h2>
-                                <p className="text-sm">
-                                    I am a versatile developer with expertise in web and mobile technologies, a strong foundation in cybersecurity, and a history of effective problem-solving and teamwork. I am passionate about leveraging technology to solve real-world problems.
-                                </p>
-                            </Card>
-                            <Card className="h-48 p-6 overflow-auto">
-                                <h2 className="text-lg font-bold mb-4">Resume & Cover Letter</h2>
-                                <p className="text-sm">
-                                    Check out my <Link href="/" className="text-blue-400 underline" target="_blank">Resume</Link> and <Link href="/" className="text-blue-400 underline" target="_blank">Cover Letter</Link> to learn more about my experience and skills.
-                                </p>
-                            </Card>
-                        </div>
+                        <div
+                            className="bg-gray-200 aspect-square rounded-lg  overflow-auto w-96 mb-4 md:mb-0"
+                            style={{ backgroundImage: `url(${tabImages[selectedTab]})`, backgroundSize: 'cover' }}
+                        />
                     </div>
                 </div>
             </div>

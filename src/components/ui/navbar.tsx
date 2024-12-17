@@ -24,18 +24,21 @@ export default function Navbar({ children, className }: { children?: React.React
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex flex-row gap-4 md:gap-8 items-center">
-          <Link href="/" className={` hover:text-blue-500 ${path =="/"? "text-blue-300":"text-foreground/60"} transition-all duration-200`}>
+          <Link href="/" className={` hover:text-blue-500 ${path == "/" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
             About
           </Link>
-          <Link href="/skills" className={` hover:text-blue-500 ${path =="/skills"? "text-blue-300":"text-foreground/60"} transition-all duration-200`}>
-            Skills
-          </Link>
-          <Link href="/work" className={` hover:text-blue-500 ${path =="/work"? "text-blue-300":"text-foreground/60"} transition-all duration-200`}>
-            My Work
-          </Link>
-          <Link href="/resume" className={` hover:text-blue-500 ${path =="/resume"? "text-blue-300":"text-foreground/60"} transition-all duration-200`}>
+          <Link href="/resume" className={` hover:text-blue-500 ${path == "/resume" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
             Resume
           </Link>
+          <Link href="/skills" className={` hover:text-blue-500 ${path == "/skills" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+            Skills
+          </Link>
+          <Link href="/work" className={` hover:text-blue-500 ${path == "/work" ? "text-blue-300" : "text-foreground/60"} transition-all duration-200`}>
+            My Work
+          </Link>
+          <Button asChild>
+            <Link href="/contact">Contact Me</Link>
+          </Button>
         </div>
 
         {/* Mobile Menu */}

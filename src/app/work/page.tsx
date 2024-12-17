@@ -17,8 +17,8 @@ function Work() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-8 z-50 md:mx-32">
-                <Card className="p-4 px-8 col-span-2">
+            <div className="grid grid-cols-1 2xl:grid-cols-3 gap-6 mt-8 px-8 z-50 md:mx-32">
+                <Card className="p-4 px-8 lg:col-span-2">
                     <div className='flex'>
                         <div className='flex flex-col'>
                             <p className='font-semibold text-md text-blue-500'>Nonprofit Organization</p>

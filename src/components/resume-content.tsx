@@ -23,7 +23,6 @@ function ResumeContent() {
             <h2 className="text-2xl font-semibold">Education</h2>
             <div className="mt-2">
                 <p className="font-medium">Highschool Diploma</p>
-                <p>Alliance Academy for Innovation in Cumming, GA</p>
                 <p>GPA: 4.0 (unweighted)</p>
                 <p>Course Rigor: AP CSP, AP Physics 1, AP Precalculus, AP US History, AP World History (5), AP Human Geography</p>
             </div>
@@ -59,24 +58,21 @@ function ResumeContent() {
             <h2 className="text-2xl font-semibold">Experience</h2>
             <div className="mt-2 space-y-4">
                 <div>
-                    <p className="font-medium">VP Of Development</p>
-                    <p>Coding Club at Alliance Academy for Innovation</p>
+                    <p className="font-medium">VP Of Development in School Coding Club</p>
                     <ul className="list-disc list-inside">
                         <li>Aided in monthly club meeting planning and execution</li>
                         <li>Fully developed club coding platform</li>
                     </ul>
                 </div>
                 <div>
-                    <p className="font-medium">Cybersecurity Committee Officer</p>
-                    <p>Cybersecurity Club at Alliance Academy for Innovation</p>
+                    <p className="font-medium">Cybersecurity Committee Officer in School Cybersecurity Club</p>
                     <ul className="list-disc list-inside">
                         <li>Aided in monthly club meeting planning and execution</li>
                         <li>Helped create challenges for club-run cybersecurity capture the flag website</li>
                     </ul>
                 </div>
                 <div>
-                    <p className="font-medium">Lead Robotics Programmer</p>
-                    <p>Vex Team 17451B at Alliance Academy for Innovation</p>
+                    <p>Lead Robotics Programmer for Vex Team 17451B (former)</p>
                     <ul className="list-disc list-inside">
                         <li>Completely developed robot-related code</li>
                         <li>Aided in state competition qualification and winning of Vex Excellence Award</li>
@@ -88,8 +84,7 @@ function ResumeContent() {
         <section className="mt-8">
             <h2 className="text-2xl font-semibold">Extracurricular & Volunteering</h2>
             <div className="mt-2">
-                <p className="font-medium">Volunteer Tutor</p>
-                <p>Next Generation Focus</p>
+                <p>Volunteer at Next Generation Focus</p>
                 <ul className="list-disc list-inside">
                     <li>Teaching students from grades 2-6 subjects such as Math & ELA for 6 hours a week</li>
                 </ul>
