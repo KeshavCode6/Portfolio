@@ -10,12 +10,12 @@ export default {
 	theme: {
     	extend: {
     		keyframes: {
-    			wiggle: {
-    				'0%, 100%': {
-    					transform: 'rotate(-13deg)'
+    			fade: {
+    				'0%': {
+    					opacity:"0%"
     				},
-    				'50%': {
-    					transform: 'rotate(13deg)'
+    				'100%': {
+    					opacity:"100%"
     				}
     			},
     			'accordion-down': {
@@ -36,7 +36,7 @@ export default {
     			}
     		},
     		animation: {
-    			wiggle: 'wiggle 0.75s ease-in-out infinite',
+    			fade: 'fade 0.75s ease-in-out',
     			'accordion-down': 'accordion-down 0.2s ease-out',
     			'accordion-up': 'accordion-up 0.2s ease-out'
     		},

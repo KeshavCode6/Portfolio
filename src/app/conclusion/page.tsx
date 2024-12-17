@@ -4,15 +4,16 @@ import React from 'react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import headshot from "@/public/headshot.jpg"
 import Image from 'next/image';
+import waves from "@/public/waves.svg"
 
 function Work() {
     return (
         <Navbar>
-            <div className="flex flex-col items-center h-full justify-center">
+            <div className="flex flex-col items-center h-5/6 justify-center">
                 <span className='text-2xl font-bold mb-4'>Conclusion</span>
                 <Image src={headshot} alt="headshot" className="w-44 aspect-square rounded-full mb-4" />
 
-                <span className='max-w-xl mb-4'>
+                <span className='max-w-xl mb-4 mx-4 md:mx-0'>
                     I would like to thank you for visiting my website. I would be eager to connect with you for the prospects
                     of an interview, or disucss anything related to computer science! Consider emailing me at
                     <a href="mailto:keshavrshah@gmail.com" className="text-blue-500 mx-2">
@@ -39,6 +40,8 @@ function Work() {
                     </a>
                 </div>
             </div>
+            <Image className="absolute md:bottom-0 w-full" alt="waves" src={waves} />
+
         </Navbar >
     );
 }

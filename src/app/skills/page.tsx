@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card'
 import Navbar from '@/components/ui/navbar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import website from "@/public/images/business.jpg"
 import business from "@/public/images/website.jpg"
 import cyber from "@/public/images/hacker.jpg"
@@ -14,7 +14,7 @@ import mobile from "@/public/images/mobile.jpg"
 export default function Work() {
     const [selectedTab, setSelectedTab] = useState("web-development");
 
-    const tabImages: { [key: string]: any } = {
+    const tabImages: { [key: string]: StaticImageData } = {
         "web-development": website,
         "mobile-development": mobile,
         "cybersecurity": cyber,
