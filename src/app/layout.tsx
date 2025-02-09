@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Navbar from "@/components/navbar";
+import localFont from 'next/font/local'
 
 export const metadata: Metadata = {
-  title: "Keshav's Portfolio",
+  title: "Keshav Shah",
+  description: "Keshav Shah's personal protfolio!",
+
 };
+
+const FunnelSans = localFont({ src: './fonts/FunnelSans.ttf' })
 
 export default function RootLayout({
   children,
@@ -25,8 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${FunnelSans.className} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
