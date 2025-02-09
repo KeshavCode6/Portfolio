@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { CiMenuBurger } from "react-icons/ci"
 import logo from "@/public/logo.png"
@@ -127,23 +127,27 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden sm:flex flex-row gap-4 md:gap-8 items-center">
+      <div className="hidden md:flex flex-row gap-4 md:gap-8 items-center">
         <NavbarLinks />
       </div>
-      <ContactDropdown />
 
       {/* Mobile Menu */}
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="sm:hidden">
+          <Button variant="ghost" size="icon" className="md:hidden">
             <CiMenuBurger className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
+
+        <SheetContent side="right" className="w-[300px] flex flex-col">
+          <SheetTitle>
+            Menu
+          </SheetTitle>
           <NavbarLinks />
         </SheetContent>
       </Sheet>
+      <ContactDropdown />
     </motion.nav>
   )
 }
