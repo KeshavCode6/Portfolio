@@ -73,7 +73,7 @@ export function Projects() {
     const inView = useInView(ref, { once: true })
 
     return (
-        <div className="flex flex-col w-full items-center py-16 pb-24  xl:px-16" id="projects">
+        <div className="flex flex-col w-full items-center py-16 pt-44 pb-24  xl:px-16" id="projects">
             <p className="text-primary text-base sm:text-lg">My Projects</p>
             <h2 className="font-semibold text-3xl sm:text-4xl md:text-5xl mb-8 text-center">What have I made?</h2>
             <div className="grid grid-cols-3 2xl:grid-cols-3 gap-4 mt-8 px-8 z-40 md:mx-32" ref={ref}>
