@@ -10,6 +10,7 @@ import logo from "@/public/logo.png"
 import { motion } from "framer-motion"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { FaCreditCard, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
+import { Send } from "lucide-react"
 
 
 export const handleLinkClick = (id: string) => {
@@ -72,7 +73,7 @@ function ContactDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button className="hover:text-blue-800 text-lg ">
-          Contact Me
+          Contact Me  <Send />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

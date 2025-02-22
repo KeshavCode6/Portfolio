@@ -17,22 +17,21 @@ const projects = [
         links: [{ href: "https://www.codeaai.org", icon: <FaExternalLinkAlt /> }],
     },
     {
+        title: "AAI CTF",
+        type: "Functional App",
+        description:
+            "This is a fully cybersecurity challenge website. It was built upon CTFD. I created many challenges for the website, along with the home page.",
+        size: "sm",
+        links: [{ href: "https://www.aaictf.org", icon: <FaExternalLinkAlt /> }],
+    },
+    {
         title: "DartCTF",
         type: "Functional App",
         description:
-            "This is a fully functional cyberstart-inspired cybersecurity challenge website. It was hosted at dartctf.com but has been taken down permanently due to being archived. All code is available on GitHub.",
-        size: "sm",
-        links: [{ href: "https://github.com/KeshavCode6/DartCTF", icon: <FaGithub /> }],
-    },
-    {
-        title: "GetBallista",
-        type: "Static Site",
-        description:
-            "This was a discontinued organization that I was a part of over the summer. I developed the landing page website for the organization, which is still accessible at getballista.com today.",
+            "This was a fully functional cybersecurity challenge website. I created the entire framework for the website from scratch",
         size: "sm",
         links: [
-            { href: "https://github.com/KeshavCode6/portfolio", icon: <FaGithub /> },
-            { href: "https://www.getballista.com", icon: <FaExternalLinkAlt /> },
+            { href: "https://github.com/KeshavCode6/dartctf", icon: <FaGithub /> },
         ],
     },
     {
@@ -44,11 +43,11 @@ const projects = [
         links: [{ href: "https://www.nsacc.org", icon: <FaExternalLinkAlt /> }],
     },
     {
-        title: "Old Portfolio",
+        title: "My Portfolio",
         type: "Static Site",
-        description: "This was my old personal portfolio website, which is available on GitHub.",
+        description: "This was my personal portfolio website, which you are on now and is also available on GitHub!",
         size: "sm",
-        links: [{ href: "https://github.com/KeshavCode6/portfolio", icon: <FaGithub /> }],
+        links: [{ href: "https://github.com/KeshavCode6/portfoliov2", icon: <FaGithub /> }],
     },
     {
         title: "Cosiva",
@@ -56,14 +55,6 @@ const projects = [
         description:
             "This is my nonprofit that I founded in 2024. NSACC is dedicated to empowering students in CS with opportunities such as national networking events, internships, and competitions.",
         size: "sm",
-        links: [{ href: "https://www.nsacc.org", icon: <FaExternalLinkAlt /> }],
-    },
-    {
-        title: "Cosmite",
-        type: "Web Dev Agency",
-        description:
-            "This is my nonprofit that I founded in 2024. NSACC is dedicated to empowering students in CS with opportunities such as national networking events, internships, and competitions.",
-        size: "lg",
         links: [{ href: "https://www.nsacc.org", icon: <FaExternalLinkAlt /> }],
     },
 ]
@@ -80,7 +71,7 @@ export function Projects() {
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className={`${project.size === "lg" ? "col-span-3 sm:col-span-2 lg:col-span-2" : "col-span-3 sm:col-span-1"}`}
+                        className={`col-span-1`}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                         transition={{

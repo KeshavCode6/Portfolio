@@ -39,7 +39,7 @@ export function Hero() {
                     src={headshot || "/placeholder.svg"}
                     alt="headshot"
                     className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover"
-                    priority
+                    unoptimized
                 />
             </div>
         </div>
