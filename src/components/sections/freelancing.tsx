@@ -85,12 +85,12 @@ export function Freelancing() {
 
     return (
         <div
-            className="flex flex-col lg:flex-row gap-16 lg:gap-32 w-full p-8 lg:p-16 pt-32 lg:pt-56 justify-center items-center"
+            className="flex flex-col lg:flex-row gap-16 2xl:gap-32 w-full  lg:p-16 pt-32 lg:pt-56 justify-center items-center"
             id="freelancing"
             ref={ref}
         >
             <motion.div
-                className="flex flex-col z-40 max-w-2xl"
+                className="flex flex-col z-40 max-w-2xl pl-16 2xl:pl-0"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
