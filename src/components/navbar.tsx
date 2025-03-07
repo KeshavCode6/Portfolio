@@ -69,8 +69,9 @@ export function NavbarLinks() {
 }
 
 
-function ContactDropdown() {
+function ContactDropdown({className}:{className?:string}) {
   return (
+    <div  className={className}>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button className="hover:text-blue-800 text-lg ">
@@ -100,6 +101,7 @@ function ContactDropdown() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+    </div>
   )
 }
 
@@ -134,6 +136,9 @@ export default function Navbar() {
         <NavbarLinks />
       </div>
 
+      <ContactDropdown className="hidden md:flex" />
+
+
       {/* Mobile Menu */}
       <Sheet>
         <SheetTrigger asChild>
@@ -148,9 +153,10 @@ export default function Navbar() {
             Menu
           </SheetTitle>
           <NavbarLinks />
+      <ContactDropdown />
+
         </SheetContent>
       </Sheet>
-      <ContactDropdown />
     </motion.nav>
   )
 }

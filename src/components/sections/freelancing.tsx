@@ -85,12 +85,12 @@ export function Freelancing() {
 
     return (
         <div
-            className="flex flex-col lg:flex-row gap-16 2xl:gap-32 w-full  lg:p-16 pt-32 lg:pt-56 justify-center items-center"
+            className="flex flex-col lg:flex-row gap-4 sm:gap-24 2xl:gap-32 w-full  lg:p-16 pt-32 lg:pt-56 justify-center items-center"
             id="freelancing"
             ref={ref}
         >
             <motion.div
-                className="flex flex-col z-40 max-w-2xl pl-16 2xl:pl-0"
+                className="flex flex-col z-40 max-w-2xl p-4 md:pl-16 2xl:pl-0"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
@@ -119,7 +119,7 @@ export function Freelancing() {
 
                 <motion.div variants={itemVariants}>
                     <Carousel
-                        className="z-40 w-full max-w-2xl"
+                        className="z-40  md:max-w-2xl"
                         plugins={[autoplayPlugin.current]}
                         onMouseEnter={() => autoplayPlugin.current.stop()}
                         onMouseLeave={() => autoplayPlugin.current.play()}
@@ -127,7 +127,7 @@ export function Freelancing() {
                         <CarouselContent >
                             {pastWork.map((work, index) => (
                                 <CarouselItem key={index} className="px-8" >
-                                    <div className="relative bg-gray-50 rounded-2xl  p-1 cursor-pointer">
+                                    <div className="relative bg-gray-50 rounded-2xl sm:mx-4 p-1 cursor-pointer">
                                         <Link href={work.link} target="_blank">
                                             <div className="overflow-hidden rounded-2xl">
                                                 <motion.div whileHover={{ scale: 1.01 }} transition={{ duration: 0.3 }}>
@@ -148,7 +148,7 @@ export function Freelancing() {
             </motion.div>
 
             <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 max-w-xl z-40 gap-4 h-full"
+                className="grid grid-cols-1 sm:grid-cols-2 max-w-xl px-16 sm:px-0 z-40 gap-4 h-full"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
