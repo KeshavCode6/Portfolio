@@ -85,7 +85,7 @@ export function Freelancing() {
 
     return (
         <div
-            className="flex flex-col lg:flex-row gap-4 sm:gap-24 2xl:gap-32 w-full  lg:p-16 pt-32 lg:pt-56 justify-center items-center"
+            className="flex flex-col lg:flex-row gap-4 sm:gap-12 2xl:gap-32 w-full  lg:p-16 pt-32 lg:pt-56 justify-center items-center"
             id="freelancing"
             ref={ref}
         >
