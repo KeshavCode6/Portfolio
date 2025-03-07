@@ -12,15 +12,23 @@ const projects = [
         title: "CodeAAI",
         type: "Functional App",
         description:
-            "This is a fully functional leetcode-inspired coding challenge website. It was hosted at codeaai.org, but is currently unoperational for updates. Code is not public on GitHub yet for security purposes.",
-        size: "lg",
+            "This is a fully functional leetcode-inspired coding challenge website. Check it out at CodeAAI.org. It was made using NextJS, TailwindCSS and more. Code is not public on GitHub yet for security purposes.",
+        size: "sm",
         links: [{ href: "https://www.codeaai.org", icon: <FaExternalLinkAlt /> }],
+    },
+    {
+        title: "GemPlay",
+        type: "Functional App",
+        description:
+            "A desktop app created for the Intro to Programming competition in FBLA. It is built upon Tauri and React. GemPlay creates dynamic ai stories using Gemini!",
+        size: "sm",
+        links: [{ href: "https://github.com/KeshavCode6/GemPlay", icon: <FaGithub /> },],
     },
     {
         title: "AAI CTF",
         type: "Functional App",
         description:
-            "This is a fully cybersecurity challenge website. It was built upon CTFD. I created many challenges for the website, along with the home page.",
+            "This is a fully cybersecurity challenge website. It was built upon CTFD. I created many challenges for the website, along with the home page. (Currently down for maintenance)",
         size: "sm",
         links: [{ href: "https://www.aaictf.org", icon: <FaExternalLinkAlt /> }],
     },
@@ -28,24 +36,16 @@ const projects = [
         title: "DartCTF",
         type: "Functional App",
         description:
-            "This was a fully functional cybersecurity challenge website. I created the entire framework for the website from scratch",
+            "This was a fully functional cybersecurity challenge website. I created the entire framework for the website from scratch using Express JS and Bootstrap",
         size: "sm",
         links: [
             { href: "https://github.com/KeshavCode6/dartctf", icon: <FaGithub /> },
         ],
     },
     {
-        title: "NSACC",
-        type: "Static Site",
-        description:
-            "This is my nonprofit that I founded in 2024. NSACC is dedicated to empowering students in CS with opportunities such as national networking events, internships, and competitions.",
-        size: "sm",
-        links: [{ href: "https://www.nsacc.org", icon: <FaExternalLinkAlt /> }],
-    },
-    {
         title: "My Portfolio",
         type: "Static Site",
-        description: "This was my personal portfolio website, which you are on now and is also available on GitHub!",
+        description: "This was my personal portfolio website, which you are on now and is also available on GitHub! This site was created using NextJS and Tailwind CSS",
         size: "sm",
         links: [{ href: "https://github.com/KeshavCode6/portfoliov2", icon: <FaGithub /> }],
     },
@@ -53,9 +53,9 @@ const projects = [
         title: "Cosiva",
         type: "Static Site",
         description:
-            "This is my nonprofit that I founded in 2024. NSACC is dedicated to empowering students in CS with opportunities such as national networking events, internships, and competitions.",
+            "This is a unpolished static site designed for a nonprofit that was discontinued. The site was created using NextJS and Tailwind CSS",
         size: "sm",
-        links: [{ href: "https://www.nsacc.org", icon: <FaExternalLinkAlt /> }],
+        links: [{ href: "https://github.com/KeshavCode6/cosiva", icon: <FaGithub /> }, { href: "https://www.cosiva.org", icon: <FaExternalLinkAlt /> }],
     },
 ]
 
@@ -66,12 +66,12 @@ export function Projects() {
     return (
         <div className="flex flex-col w-full items-center py-16 pt-44 pb-24  xl:px-16" id="projects">
             <p className="text-primary text-base sm:text-lg">My Projects</p>
-            <h2 className="font-semibold text-3xl sm:text-4xl md:text-5xl mb-8 text-center">What have I made?</h2>
+            <h2 className="font-semibold text-3xl sm:text-4xl md:text-5xl mb-8 text-center">What else have I made?</h2>
             <div className="grid grid-cols-3 2xl:grid-cols-3 gap-4 mt-8 px-8 z-40 md:mx-32" ref={ref}>
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className={`col-span-1`}
+                        className={project.size == "lg" ? "col-span-2" : `col-span-1`}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                         transition={{

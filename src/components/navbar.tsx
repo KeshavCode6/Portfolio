@@ -21,33 +21,34 @@ export const handleLinkClick = (id: string) => {
 };
 
 export function NavbarLinks() {
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeLink, setActiveLink] = useState("#about");
 
   const links = [
     { id: "#about", label: "About" },
     { id: "#skills", label: "Skills" },
+    { id: "#freelancing", label: "Freelancing" },
     { id: "#projects", label: "My Work" },
   ];
 
-  useEffect(() => {
-    const onScroll = () => {
-      links.forEach(({ id }) => {
-        const element = document.querySelector(id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom > 0) {
-            setActiveLink(id);
-          }
+  const onScroll = () => {
+    links.forEach(({ id }) => {
+      const element = document.querySelector(id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 0) {
+          setActiveLink(id);
         }
-      });
-    };
+      }
+    });
+  };
 
+  useEffect(() => {
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
-
 
 
   return (
@@ -103,7 +104,7 @@ function ContactDropdown() {
 }
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,6 +112,7 @@ export default function Navbar() {
     }
 
     window.addEventListener("scroll", handleScroll)
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
