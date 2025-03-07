@@ -13,16 +13,8 @@ const projects = [
         type: "Functional App",
         description:
             "This is a fully functional leetcode-inspired coding challenge website. Check it out at CodeAAI.org. It was made using NextJS, TailwindCSS and more. Code is not public on GitHub yet for security purposes.",
-        size: "sm",
+        size: "lg",
         links: [{ href: "https://www.codeaai.org", icon: <FaExternalLinkAlt /> }],
-    },
-    {
-        title: "GemPlay",
-        type: "Functional App",
-        description:
-            "A desktop app created for the Intro to Programming competition in FBLA. It is built upon Tauri and React. GemPlay creates dynamic ai stories using Gemini!",
-        size: "sm",
-        links: [{ href: "https://github.com/KeshavCode6/GemPlay", icon: <FaGithub /> },],
     },
     {
         title: "AAI CTF",
@@ -55,7 +47,23 @@ const projects = [
         description:
             "This is a unpolished static site designed for a nonprofit that was discontinued. The site was created using NextJS and Tailwind CSS",
         size: "sm",
-        links: [{ href: "https://github.com/KeshavCode6/cosiva", icon: <FaGithub /> }, { href: "https://www.cosiva.org", icon: <FaExternalLinkAlt /> }],
+        links: [{ href: "https://github.com/KeshavCode6/cosiva", icon: <FaGithub /> }, { href: "https://cosiva.keshav.pro", icon: <FaExternalLinkAlt /> }],
+    },
+    {
+        title: "GemPlay",
+        type: "Functional App",
+        description:
+            "A desktop app created for the Intro to Programming competition in FBLA. It is built upon Tauri and React. GemPlay creates dynamic ai stories using Gemini!",
+        size: "lg",
+        links: [{ href: "https://github.com/KeshavCode6/GemPlay", icon: <FaGithub /> },],
+    },
+    {
+        title: "NSACC",
+        type: "Static Site",
+        description:
+            "This is a unpolished static site designed for a nonprofit that was discontinued. The site was created using NextJS and Tailwind CSS",
+        size: "sm",
+        links: [{ href: "https://github.com/KeshavCode6/nsacc", icon: <FaGithub /> }, { href: "https://nsacc.keshav.pro", icon: <FaExternalLinkAlt /> }],
     },
 ]
 
