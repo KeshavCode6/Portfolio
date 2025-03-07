@@ -105,15 +105,18 @@ function ContactDropdown() {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(true)
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 30)
+  }
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30)
-    }
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    handleScroll()
   }, [])
 
   return (

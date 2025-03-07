@@ -11,6 +11,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay"
 import cosiva from "@/public/examples/cosiva.png"
 import codeaai from "@/public/examples/codeaai.png"
+import nsacc from "@/public/examples/nsacc.png"
 import portfolio from "@/public/examples/portfolio.png"
 import Image from "next/image"
 
@@ -43,10 +44,10 @@ export function Freelancing() {
     ]
 
     const pastWork = [
-        { image: cosiva, link: "https://www.cosiva.org" },
+        { image: cosiva, link: "https://cosiva.keshav.pro" },
         { image: codeaai, link: "https://www.codeaai.org" },
         { image: portfolio, link: "https://www.keshav.pro" },
-
+        { image: nsacc, link: "https://nsacc.keshav.pro" },
     ]
 
     const containerVariants = {
