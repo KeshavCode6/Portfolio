@@ -60,7 +60,7 @@ const projects = [
     {
         title: "Cosiva",
         description:
-            "Static informational website for COSIVA, a 'fake' nonprofit. Effectively communicates key initiatives and events, providing clear navigation and accessibility to promote community involvement and awareness.",
+            "Static informational website for COSIVA, a fake nonprofit. Effectively communicates key initiatives and events, providing clear navigation and accessibility to promote community involvement and awareness.",
         icon: <FaGlobe className="text-white" />,
         color: "bg-orange-600",
         image: cosiva,
@@ -71,7 +71,7 @@ const projects = [
         title: "NSACC",
         image: nsacc,
         description:
-            "Static site for NSACC, a 'fake' nonprofit. Focused on community outreach. Designed to support local engagement efforts with up-to-date event listings, resource sections, and a professional yet approachable design to foster connections.",
+            "Static site for NSACC, a fake nonprofit. Focused on community outreach. Designed to support local engagement efforts with up-to-date event listings, resource sections, and a professional yet approachable design to foster connections.",
         icon: <FaGlobe className="text-white" />,
         color: "bg-purple-700",
         urlDemo: "https://nsacc.keshav.pro",
@@ -112,7 +112,7 @@ export function Projects() {
                 What have I made?
             </h2>
             <p className="text-lg text-muted-foreground mb-12 mt-2 max-w-3xl text-center">
-                Here is a collection of some of my best skills. Check everything I've made on{" "}
+                Here is a collection of some of my best skills. Check everything I have made on{" "}
                 <Link
                     className="underline text-primary"
                     target="_blank"

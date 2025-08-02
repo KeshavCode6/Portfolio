@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { FaGlobe, FaLock } from "react-icons/fa"
 import { MdMemory } from "react-icons/md"
-import { GridBackground } from "../background"
 
 const skills = [
     {

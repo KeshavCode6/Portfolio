@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaDiscord, FaFacebook, FaLinkedin } from "react-icons/fa"
+import { FaDiscord, FaLinkedin } from "react-icons/fa"
 import { PiInstagramLogoFill, PiMailboxFill } from "react-icons/pi"
 
 export default function Socials() {

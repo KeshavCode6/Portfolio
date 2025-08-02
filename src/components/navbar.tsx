@@ -10,7 +10,7 @@ import logo from "@/public/logo.png"
 import { motion } from "framer-motion"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { FaCreditCard, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
-import { Handshake, Moon, Send, Sun, User } from "lucide-react"
+import { Handshake, Moon, Sun, } from "lucide-react"
 import { useTheme } from "./theme"
 import { cn } from "@/lib/utils"
 
