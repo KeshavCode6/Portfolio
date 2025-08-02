@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import localFont from 'next/font/local'
+import { ThemeProvider } from "@/components/theme";
 
 export const metadata: Metadata = {
   title: "Keshav Shah",
@@ -21,8 +22,10 @@ export default function RootLayout({
       <body
         className={`${FunnelSans.className} antialiased`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
