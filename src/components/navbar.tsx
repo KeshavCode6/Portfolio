@@ -172,7 +172,7 @@ export default function Navbar() {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Toggle menu">
-            <CiMenuBurger className="h-6 w-6" />
+            <CiMenuBurger className="h-6 w-6 dark:text-white" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
