@@ -149,7 +149,7 @@ export default function Navbar() {
         }`}
     >
       {/* Logo Section */}
-      <Link href="/" className="font-bold text-xl flex items-center gap-2">
+      <Link href="/" className="dark:text-white font-bold text-xl flex items-center gap-2">
         <Image src={logo || "/placeholder.svg"} alt="Logo" width={40} className="pointer-events-none" />
         <p>Keshav Shah</p>
       </Link>

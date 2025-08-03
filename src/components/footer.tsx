@@ -34,7 +34,7 @@ export function Footer({
 		<footer className={cn("bg-[#0894e4] w-full px-4 relative", className)}>
 			<div className="max-w-container mx-auto py-8">
 				<div className="flex flex-col gap-8 items-center justify-center md:flex-row md:justify-between md:px-16">
-					<div className="flex items-center gap-2 text-muted">
+					<div className="dark:text-white flex items-center gap-2 text-muted">
 						<Image src={logo} alt="logo" className="max-w-9" />
 						<h3 className="text-xl font-bold">Keshav Shah</h3>
 					</div>
@@ -44,7 +44,7 @@ export function Footer({
 				</div>
 
 				<div className="border-t border-sky-600  mt-8 pt-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted px-16">
-					<div>{copyright}</div>
+					<div className="dark:text-white">{copyright}</div>
 					<div className="flex items-center gap-2 mt-2 sm:mt-0 z-30 text-sky-200">
 						<Socials />
 					</div>
