@@ -26,7 +26,7 @@ export function Hero() {
                     My mission is to engineer intelligent systems that empower people, combining AI, automation, and design
                     to solve hard problems, accelerate learning, and shape the future of human-computer collaboration.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-2 justify-center md:justify-start">
+                <div className="flex h-24 lg:h-auto flex-col sm:flex-row gap-2 justify-center md:justify-start">
                     <Button className="text-white flex-1 w-full sm:w-auto text-sm" size="lg" onClick={() => handleLinkClick("#about")}>
                         About me <PersonStanding className="ml-2 h-4 w-4" />
                     </Button>
@@ -42,7 +42,7 @@ export function Hero() {
             </div>
 
             {/* Headshot */}
-            <div className="bg-blue-900/[0.05] dark:bg-white/5 rounded-full p-2 pb-0 transition-colors duration-300">
+            <div className="bg-blue-900/[0.05] mb-12 sm:mb-0 dark:bg-white/5 rounded-full p-2 pb-0 transition-colors duration-300">
                 <Image
                     src={headshot}
                     alt="headshot"

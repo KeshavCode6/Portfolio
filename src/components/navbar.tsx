@@ -77,7 +77,7 @@ function ContactDropdown({ className }: { className?: string }) {
     <div className={className}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button>Contact Me <Handshake /></Button>
+          <Button className="text-white">Contact Me <Handshake /></Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem>
@@ -155,38 +155,46 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex flex-row gap-4 md:gap-8 items-center">
+      <div className="hidden lg:flex flex-row gap-4 md:gap-8 items-center">
         <NavbarLinks />
       </div>
 
-      <div className="flex gap-2 items-center">
-        <Button
-          onClick={toggleTheme}
-          variant={"outline"}
-          size={"icon"}
-        >
+      <div className=" items-center gap-2 hidden lg:flex">
+        <Button onClick={toggleTheme} variant="outline" size="icon" aria-label="Toggle theme">
           {theme === "dark" ? <Sun className="text-white" /> : <Moon />}
         </Button>
-        <ContactDropdown className="hidden md:flex" />
-      </div>
 
+        {/* Desktop contact dropdown */}
+        <ContactDropdown className="" />
+      </div>
 
       {/* Mobile Menu */}
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Toggle menu">
             <CiMenuBurger className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
 
-        <SheetContent side="right" className="w-[300px] flex flex-col">
-          <SheetTitle>
+        <SheetContent
+          side="right"
+          className="w-[300px] flex flex-col overflow-auto"
+        >
+          <SheetTitle className="flex items-center mt-7 justify-between mb-4 text-lg font-semibold">
             Menu
-          </SheetTitle>
-          <NavbarLinks />
-          <ContactDropdown />
 
+            <Button onClick={toggleTheme} variant="outline" size="icon" aria-label="Toggle theme">
+              {theme === "dark" ? <Sun className="text-white" /> : <Moon />}
+            </Button>
+          </SheetTitle>
+
+          {/* Navigation links */}
+          <NavbarLinks />
+
+
+          {/* Mobile contact dropdown */}
+          <ContactDropdown className="mt-auto" />
         </SheetContent>
       </Sheet>
     </motion.nav>
