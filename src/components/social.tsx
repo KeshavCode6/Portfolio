@@ -9,7 +9,7 @@ export default function Socials() {
 			<Link href="https://discordapp.com/users/743962655072452680" target='_blank' className='hover:bg-gray-400/75 rounded-2xl p-2 duration-400 transition-all' aria-label='Facebook Link'>
 				<FaDiscord className="text-2xl" size={35} />
 			</Link>
-			<Link href="https://www.instagram.com/kesh306/" target='_blank' className='hover:bg-gray-400/75 rounded-2xl p-2 duration-400 transition-all' aria-label='Check us out on instragram at ballista.designs'>
+			<Link href="https://www.instagram.com/kesh036/" target='_blank' className='hover:bg-gray-400/75 rounded-2xl p-2 duration-400 transition-all' aria-label='Check us out on instragram at ballista.designs'>
 				<PiInstagramLogoFill className="text-2xl" size={35} />
 			</Link>
 			<Link href="https://www.linkedin.com/in/keshav-shah-975297301/" target='_blank' className='hover:bg-gray-400/75 rounded-2xl p-2 duration-400 transition-all' aria-label='Email us at contact@ballistadesigns.com'>
