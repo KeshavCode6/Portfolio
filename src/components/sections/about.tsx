@@ -13,6 +13,8 @@ import {
 	SiRobotframework,
 } from "react-icons/si"
 import { Database } from "lucide-react"
+import random from "@/public/random.jpg"
+import Image from "next/image"
 
 const techStack = [
 	{ name: "React", icon: <FaReact className="text-blue-500" /> },
@@ -62,9 +64,9 @@ export function AboutSection() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="relative"
 					>
-						<div className="relative overflow-hidden rounded-2xl shadow-2xl">
-							<img
-								src="/api/placeholder/500/600"
+						<div className="z-30 relative overflow-hidden rounded-2xl shadow-2xl max-w-lg mx-auto">
+							<Image
+								src={random}
 								alt="Profile"
 								className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
 							/>
@@ -79,12 +81,15 @@ export function AboutSection() {
 						className="space-y-6"
 					>
 						<div className="dark:text-white text-lg max-w-none">
-							Hi, I’m Keshav Shah — a passionate developer and educator focused on AI, ML, and full-stack SWE.
-							I lead projects that create practical tools and engaging content to help others master complex topics.
+							Hi I am <strong>Keshav Shah</strong>, a passionate developer and educator focused on <strong>Machine Learning</strong>, <strong>Artificial Intelligence</strong>, and full-stack software engineering.
+							I lead projects that build practical tools and create engaging content to help others master these complex topics.
 							<br />
-							I love entrepreneurship, and my long-term goal is to launch a startup using cutting-edge AI. One day,
-							I dream of contributing to Artificial General Intelligence (AGI) and advancing what AI is capable of.
+							I love entrepreneurship and my long-term goal is to launch a startup leveraging cutting-edge AI.
+							One day I dream of contributing to <strong>Artificial General Intelligence (AGI)</strong> and pushing the boundaries of what AI can do.
+							<br />
+							I am very open to <strong>collaborations</strong> and new opportunities in the ML and AI space.
 						</div>
+
 					</motion.div>
 				</div>
 			</motion.div>

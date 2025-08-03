@@ -32,7 +32,13 @@ export function GridVisibleBackground() {
 export function GridDotsBackground() {
 	return (
 		<div
-			className="z-[-1] absolute inset-0 h-full w-full opacity-60 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] "
+			className="
+        z-[-1] absolute inset-0 h-full w-full opacity-60 
+		dark:opacity-30
+        bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
+        dark:bg-[radial-gradient(#374151_1px,transparent_1px)] 
+        [background-size:16px_16px]
+      "
 		></div>
 	)
 }

@@ -1,5 +1,4 @@
 "use client";
-import { BugIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -10,11 +9,10 @@ const ErrorPage = () => {
 
         <h1 className="text-3xl font-bold mt-6 text-primary flex items-center gap-4">
           404
-          <BugIcon />
         </h1>
         <span className="max-w-80 text-center my-2">
           This page does not exist! If you believe this is a mistake, please
-          contact us. For now,{" "}
+          contact me. For now,{" "}
           <Link className="text-blue-700 underline" href="/">
             return home
           </Link>

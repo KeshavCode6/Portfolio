@@ -1,8 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { FaGithub, FaGlobe, FaVideo, FaCode } from "react-icons/fa"
-import { SiGooglescholar } from "react-icons/si"
+import { FaGithub, FaGlobe, FaVideo, FaCode, FaCodeBranch, FaPaperPlane } from "react-icons/fa"
 import { motion } from "framer-motion"
 import { GridDotsBackground } from "../background"
 import { Button } from "../ui/button"
@@ -11,21 +10,23 @@ import Link from "next/link"
 import Image from "next/image";
 import waves from "@/public/waves.svg"
 
-import codeaai from "@/public/examples/codeaai.png"
-import cosiva from "@/public/examples/cosiva.png"
-import nsacc from "@/public/examples/nsacc.png"
+import codeaai from "@/public/projects/codeaai.png"
+import cosiva from "@/public/projects/cosiva.png"
+import nsacc from "@/public/projects/nsacc.png"
+import ballistadesigns from "@/public/projects/ballistadesigns.png"
+import ascent from "@/public/projects/ascent.png"
+
 import { cn } from "@/lib/utils"
 
 const projects = [
     {
         title: "Ascent",
-        description:
-            "My flagship project: an advanced ML education platform featuring comprehensive long-form video content, interactive coding lessons, and personalized learning paths. Ascent empowers learners at all levels to master machine learning concepts through engaging, hands-on experiences.",
-        icon: <SiGooglescholar className="text-white" />,
-        image: codeaai,
+        description: "I run the Ascent YouTube channel, making deep long-form and clear short-form content on machine learning and AI. As CEO, I lead my team to deliver practical lessons using TensorFlow, Scikit-Learn, and Langchain, helping viewers build real skills.",
+        icon: <FaPaperPlane className="text-white" />,
+        image: ascent,
         color: "bg-cyan-600",
-        urlDemo: "https://ascent.keshav.pro",
-        urlGitHub: "https://github.com/KeshavCode6/ascent",
+        urlDemo: "https://youtube.com/@Ascent2",
+        urlGitHub: "https://github.com/AscentYT",
     },
     {
         title: "CodeAAI",
@@ -35,7 +36,16 @@ const projects = [
         color: "bg-blue-600",
         image: codeaai,
         urlDemo: "https://codeaai.org",
-        urlGitHub: "https://github.com/KeshavCode6/codeaai",
+        urlGitHub: "https://github.com/kshau/code-aai",
+    },
+    {
+        title: "AuraCode",
+        description: "AuraCode is a microlearning platform teaching coding through interactive, bite-sized lessons. Powered by AI including Google Gemini, it personalizes content to each learners needs. AuraCode was also a finalist in the Code4Hearts hackathon.",
+        icon: <FaCodeBranch className="text-white" />,
+        color: "bg-purple-600",
+        embed: "https://www.youtube.com/embed/PvV3terAsKw?si=LgzxgfKaE83lTr5y",
+        urlDemo: "https://www.youtube.com/watch?v=PvV3terAsKw",
+        urlGitHub: "https://github.com/Immortal215/AuraCode",
     },
     {
         title: "GemPlay",
@@ -43,8 +53,8 @@ const projects = [
             "An AI-powered story-driven game made for FBLA SLC, where it placed 6th. GemPlay enhances player experience with adaptive gameplay mechanics, intelligent matchmaking, and dynamic content generation to personalize the gaming journey.",
         icon: <FaVideo className="text-white" />,
         color: "bg-green-700",
-        image: codeaai,
-        urlDemo: "",
+        embed: "https://www.youtube.com/embed/5mHeAxvu4k4?si=iDQ0jvHau0UyKLM1",
+        urlDemo: "https://www.youtube.com/watch?v=5mHeAxvu4k4",
         urlGitHub: "https://github.com/KeshavCode6/gemplay",
     },
     {
@@ -53,7 +63,7 @@ const projects = [
             "A static site showcasing creative UI/UX designs and concepts. Highlights modern web design principles, responsive layouts, and innovative user interface elements for visually engaging and intuitive digital experiences.",
         icon: <FaGlobe className="text-white" />,
         color: "bg-blue-500",
-        image: codeaai,
+        image: ballistadesigns,
         urlDemo: "https://ballistadesigns.keshav.pro",
         urlGitHub: "https://github.com/KeshavCode6/ballistadesigns",
     },
@@ -95,10 +105,10 @@ export function Projects() {
             className="relative flex flex-col w-full items-center py-16 pt-44 pb-72 overflow-hidden"
             id="projects"
         >
-            <div className="absolute inset-0 z-[-10] overflow-hidden pointer-events-none">
+            <div className="dark:bg-gray-900 absolute inset-0 z-[-10] overflow-hidden pointer-events-none">
                 <GridDotsBackground />
                 {/* Blue Gradient Circles */}
-                <div className="absolute -top-24 -left-24 w-72 h-72 bg-sky-400/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -top-24 -left-24 w-72 h-72 bg-sky-400/10 rounded-full blur-3xl animate-pulse" />
                 <div className="absolute top-1/2 -right-48 w-[28rem] h-[28rem] bg-sky-300/30 rounded-full blur-[100px]" />
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-sky-300/10 rounded-full blur-2xl" />
                 <div className="absolute top-1/4 left-8 w-32 h-32 bg-sky-200/20 rounded-full blur-2xl animate-pulse" />
@@ -159,7 +169,7 @@ export function Projects() {
                     <div className="w-full flex gap-2 z-30">
                         {projects[activeIndex].urlDemo && (
                             <Link href={projects[activeIndex].urlDemo} target="_blank" className="flex-1">
-                                <Button className="flex-1 flex items-center justify-center gap-2" asChild>
+                                <Button className="flex-1 flex text-white items-center justify-center gap-2" asChild>
                                     <span>
                                         <PlaySquareIcon />
                                         Live Demo
@@ -171,7 +181,7 @@ export function Projects() {
                         <Link href={projects[activeIndex].urlGitHub} target="_blank" className="flex-1">
                             <Button
                                 variant="outline"
-                                className="flex-1 flex items-center justify-center gap-2"
+                                className="flex-1 flex items-center justify-center gap-2 dark:text-white"
                                 asChild
                             >
                                 <span>
@@ -183,14 +193,27 @@ export function Projects() {
                     </div>
                 </div>
 
-                <Link href={projects[activeIndex].urlGitHub} target="_blank" className={cn("z-30 p-4", `bg-gray-50 rounded-lg`)}>
-                    <Image
-                        src={projects[activeIndex].image}
-                        alt={projects[activeIndex].title}
-                        className={`max-w-lg rounded-lg cursor-pointer  transition-colors ${projects[activeIndex].color}`}
-                        style={{ aspectRatio: "16 / 9" }}
-                    />
+                <Link
+                    href={projects[activeIndex].urlDemo}
+                    target="_blank"
+                    className={cn("z-30 p-3", "bg-gray-50 dark:bg-gray-800 rounded-lg")}
+                >
+                    {projects[activeIndex].embed ? (
+                        <div className="relative w-full max-w-lg aspect-video rounded-lg overflow-hidden shadow-lg">
+
+                            <iframe width="560" height="315" src={projects[activeIndex].embed}
+                                title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        </div>
+                    ) : projects[activeIndex].image ? (
+                        <Image
+                            src={projects[activeIndex].image}
+                            alt={projects[activeIndex].title}
+                            className={`max-w-lg rounded-lg cursor-pointer transition-colors ${projects[activeIndex].color}`}
+                            style={{ aspectRatio: "16 / 9" }}
+                        />
+                    ) : null}
                 </Link>
+
 
             </motion.div>
             <Image className="absolute  left-0 right-0 bottom-0" src={waves} alt="waves" />

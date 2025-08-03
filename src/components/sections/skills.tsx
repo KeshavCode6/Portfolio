@@ -42,7 +42,7 @@ export function Skills() {
                 Here is a brief, non-technical summary of some of my best skills.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-40 relative max-w-7xl mx-auto w-full" ref={ref}>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-40 relative max-w-7xl mx-auto w-full px-8" ref={ref}>
                 {skills.map((skill, index) => (
                     <motion.div
                         key={index}
