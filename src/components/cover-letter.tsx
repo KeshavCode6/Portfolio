@@ -6,7 +6,7 @@ const CoverLetterContent = () => {
       {/* Date and Address */}
       <div className="text-sm text-gray-600 mb-6">
         <p>Personal cover letter on web development</p>
-        <p>Updated as of 12/17/2024</p>
+        <p>Updated as of 10/21/2025</p>
       </div>
 
       {/* Body */}
@@ -32,7 +32,7 @@ const CoverLetterContent = () => {
         </p>
 
         <p className="mt-6">Yours sincerely,</p>
-        <p className="font-bold text-xl mt-1 italic" style={{fontFamily:"cursive"}}>Keshav Shah</p>
+        <p className="font-bold text-xl mt-1 italic" style={{ fontFamily: "cursive" }}>Keshav Shah</p>
       </div>
     </div>
   );
