@@ -7,7 +7,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import waves from "@/public/waves.svg"
-import headshot from "@/public/headshot.jpg"
+import headshot from "@/public/headshot.png"
 import Image from "next/image"
 import Link from "next/link";
 
@@ -36,7 +36,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <Image src={headshot} alt="headshot" className="w-64 aspect-square rounded-full" />
+          <Image src={headshot} alt="headshot" className="bg-gray-100 w-64 aspect-square rounded-full" />
         </div>
 
         <div className="flex flex-col mt-4 z-50 items-center mb-4 md:mb-0 p-8 rounded-lg">

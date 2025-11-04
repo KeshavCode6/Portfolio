@@ -20,7 +20,7 @@ const CoverLetterContent = () => {
         </p>
 
         <p className="mb-4">
-          Like I mentioned before, I have been partaking in web development for around 3 years now. I have experience using various web technologies, including frontend development with HTML/CSS, and more advanced technologies like React. I have worked extensively with frameworks such as Next.JS, as well! I am well-versed in backend development through technologies such as Express.js and Flask in addition to my frontend skills. As well as that, I am aware of the necessity of secure code and as a result, I have become certified in the fundamentals of cybersecurity by the SEC275 GFACT.
+          Like I mentioned before, I have been partaking in web development for around 5 years now. I have experience using various web technologies, including frontend development with HTML/CSS, and more advanced technologies like React. I have worked extensively with frameworks such as Next.JS, as well! I am well-versed in backend development through technologies such as Express.js and Flask in addition to my frontend skills. As well as that, I am aware of the necessity of secure code and as a result, I have become certified in the fundamentals of cybersecurity by the SEC275 GFACT.
         </p>
 
         <p className="mb-4">
