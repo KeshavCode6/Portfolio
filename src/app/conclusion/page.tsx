@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Navbar from '@/components/ui/navbar';
 import React from 'react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-import headshot from "@/public/headshot.jpg"
+import headshot from "@/public/headshot.png"
 import Image from 'next/image';
 import waves from "@/public/waves.svg"
 
@@ -21,7 +21,7 @@ function Work() {
                     </a>
                     or contacting me through the methods below!
                 </span>
-                
+
                 <div className="flex flex-row gap-2 mt-2">
                     <a href="https://www.instagram.com/keshavshah184/" target="_blank" rel="noopener noreferrer">
                         <Button size="icon">
